@@ -19,7 +19,29 @@ async def on_message(message: discord.Message):
         elif x in message.content and len(x) > 3:
             async with message.channel.typing():
                 await channel.send('LEAVE ME ALONE
-
+     
+                                  
+    basic_question = ['?', 'what']
+        for x in basic_question:
+         if message.content.startswith(x) and x == basic_question[0]:
+          async with message.channel.typing():
+           await channel.send('question marks go at the end, you moron')
+         elif x in message.content and len(x) > 1:
+           async with message.channel.typing():
+            await channel.send('do you ever stop talking')
+          
+    speculative_question = ['imagine', 'consider', 'think']
+    for x in speculative_question:
+      if x in message.content:
+        if x == speculative_question[0]:
+          async with message.channel.typing():
+            await channel.send('imagine if you stopped talking')
+        elif x == speculative_question[1]:
+          async with message.channel.typing():
+            await channel.send('have you considered picking up a hobby or two')
+        elif x == speculative_question[2]:
+          async with message.channel.typing():
+            await channel.send('have you thought about being quiet')
 
 @client.event
 async def on_ready():
