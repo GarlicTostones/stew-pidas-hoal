@@ -11,8 +11,10 @@ async def on_message(message: discord.Message):
         return
     channel = message.channel
 
-    if 'a' in message.content:
-        await channel.send('no')
+    trigger1 = ['hello', 'hi']
+    for x in trigger1:
+        if x in message.content:
+            await channel.send('no')
 
 
 @client.event
