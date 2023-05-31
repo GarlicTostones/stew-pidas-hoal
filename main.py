@@ -11,10 +11,14 @@ async def on_message(message: discord.Message):
         return
     channel = message.channel
 
-    trigger1 = ['hello', 'hi']
+        trigger1 = ['hello', 'hi', 'hey', 'howdy', 'whats up']
     for x in trigger1:
-        if x in message.content:
-            await channel.send('no')
+        if x in message.content and len(x) <= 3:
+            async with message.channel.typing():
+                await channel.send('SHUT UP')
+        elif x in message.content and len(x) > 3:
+            async with message.channel.typing():
+                await channel.send('LEAVE ME ALONE
 
 
 @client.event
