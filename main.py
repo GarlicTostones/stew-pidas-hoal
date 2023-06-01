@@ -54,6 +54,10 @@ async def on_message(message: discord.Message):
 
 @client.event
 async def on_ready():
+    gameList = ['Google Classroom', 'Gmail', 'JupiterEd', 'Runestone Academy', 'practice.it',
+                'codingbat.com', 'My AP Classroom']
+    game = discord.Game(random.choice(gameList))
+    await client.change_presence(status=discord.Status.idle, activity=game)
     print('AAAAA')
 
 
