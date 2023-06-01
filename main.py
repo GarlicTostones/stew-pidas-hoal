@@ -10,7 +10,10 @@ async def on_message(message: discord.Message):
     if message.author == client.user:
         return
     channel = message.channel
-
+    
+    async def delay():
+        await asyncio.sleep(0.7)
+    
     greeting = ['hello', 'hi', 'hey', 'howdy']
     for x in greeting:
         if message.content.startswith(x) and len(x) <= 3:
