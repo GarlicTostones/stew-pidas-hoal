@@ -1,5 +1,5 @@
 import discord
-
+import random
 intents = discord.Intents.default()
 intents.message_content = True # make sure to go to developer portal and turn on the respective intents
 client = discord.Client(intents=intents)
@@ -42,6 +42,12 @@ async def on_message(message: discord.Message):
         elif x == speculative_question[2]:
           async with message.channel.typing():
             await channel.send('have you thought about being quiet')
+     
+    firstPerson = ['thats cool but i dont care', 'nobody is listening to you',
+                   'bro you jus love to talk huh <:skull:1113634475218325635>']
+    firstPersonResponse = random.choice(firstPerson)
+    if message.content.startswith('i '):
+        await channel.send(firstPersonResponse)
 
 @client.event
 async def on_ready():
