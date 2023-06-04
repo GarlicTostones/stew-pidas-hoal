@@ -97,4 +97,4 @@ async def on_ready():
     print('AAAAA')
 
 
-client.run(os.getenv('MTExMjkxMjkwMTYzMjY5MjI0NQ.GNw7cW.QRdacwKeuTJnvxVVfaaHjUpwo4Oz03LxjkKcfM'))
+client.run('MTExMjkxMjkwMTYzMjY5MjI0NQ.GNw7cW.QRdacwKeuTJnvxVVfaaHjUpwo4Oz03LxjkKcfM')
